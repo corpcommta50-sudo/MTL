@@ -208,13 +208,16 @@ body {
 .dot-label {
   position: absolute; right: 20px; top: 50%;
   transform: translateY(-50%);
-  background: var(--text-h); color: #fff;
+  background: #F5002F; /* เปลี่ยนสีพื้นหลัง */
+  color: #fff;
   font-size: 11px; padding: 3px 10px;
   border-radius: 4px; white-space: nowrap;
-  pointer-events: none; opacity: 0;
+  pointer-events: none; opacity: 1;
   transition: opacity .2s ease;
+  min-width: 100px;        /* เพิ่ม - ทำให้ label กว้างเท่ากัน */
+  text-align: center;      /* เพิ่ม - ให้ข้อความอยู่กึ่งกลาง */
 }
-.nav-dot:hover .dot-label { opacity: 1; }
+
 
 /* ══════════════════════════════════════
    PANELS

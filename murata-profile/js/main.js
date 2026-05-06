@@ -73,7 +73,10 @@ const panelObserver = new IntersectionObserver((entries) => {
       if (navDots[idx]) navDots[idx].classList.add('active');
     }
   });
-}, { threshold: 0.5 });
+}, { 
+  threshold: 0.1,        // ลดจาก 0.5 → 0.3
+  rootMargin: '0px 0px -20% 0px'  // เพิ่ม - ให้ trigger เร็วขึ้น
+});
 
 panels.forEach(p => panelObserver.observe(p));
 
