@@ -208,14 +208,18 @@ body {
 .dot-label {
   position: absolute; right: 20px; top: 50%;
   transform: translateY(-50%);
-  background:#F5002F; /* เปลี่ยนสีพื้นหลัง */
+  background: #F5002F;
   color: #fff;
   font-size: 11px; padding: 3px 10px;
   border-radius: 4px; white-space: nowrap;
-  pointer-events: none; opacity: 1;
+  pointer-events: none; opacity: 0; /* ← ซ่อนไว้ก่อน */
   transition: opacity .2s ease;
-  min-width: 100px;        /* เพิ่ม - ทำให้ label กว้างเท่ากัน */
-  text-align: center;      /* เพิ่ม - ให้ข้อความอยู่กึ่งกลาง */
+  min-width: 100px;
+  text-align: center;
+}
+
+.nav-dot:hover .dot-label {
+  opacity: 1; /* ← แสดงเมื่อ hover ที่ dot */
 }
 
 
